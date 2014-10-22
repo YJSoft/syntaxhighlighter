@@ -1,6 +1,6 @@
 # Syntax highlighter for XpressEngine
 
-[![Build Status](https://travis-ci.org/bnu/code_highlighter.png?branch=master)](https://travis-ci.org/bnu/code_highlighter)
+[![Build Status](https://travis-ci.org/YJSoft/syntaxhighlighter.png?branch=master)](https://travis-ci.org/YJSoft/syntaxhighlighter)
 
 type : editor component
 
