@@ -85,8 +85,9 @@ class syntaxhighlighter extends EditorHandler
 		if($option_highlight)
 		{
 			$option_highlight = preg_replace_callback("/([0-9]{1,})[-]([0-9]{1,})/",
-			function ($matches) {
-				$start = (int) $matches[1];
+			create_function(
+				'$matches',
+				'$start = (int) $matches[1];
 				$end = (int) $matches[2];
 
 				debugPrint($start . "~" . $end);
@@ -95,8 +96,8 @@ class syntaxhighlighter extends EditorHandler
 					$lines[] = $i;
 				}
 
-				return implode(",", $lines);
-			},$option_highlight);
+				return implode(",", $lines);'
+			),$option_highlight);
 
 			$option[] = 'highlight:['.$option_highlight.']';
 		}
